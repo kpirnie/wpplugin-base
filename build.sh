@@ -9,7 +9,7 @@ GROUP="$( stat -c '%G' "${ROOT}" )"
 
 # pull some info from the plugin header and readme
 SLUG="$( grep -m1 'Text Domain:' "${SRC}"/*.php | sed 's/.*Text Domain:[[:space:]]*//' | tr -d '\r' )"
-VERSION="$( grep -m1 '^Version:' "${SRC}/${SLUG}.php" | sed 's/^Version:[[:space:]]*//' | tr -d '\r' )"
+VERSION="$( grep -m1 '^ \* Version:' "${SRC}/${SLUG}.php" | sed 's/^ \* Version:[[:space:]]*//' | tr -d '\r' )"
 STABLE="$( grep -m1 '^Stable tag:' "${SRC}/readme.txt" | sed 's/^Stable tag:[[:space:]]*//' | tr -d '\r' )"
 NAME="$( grep -m1 '^ \* Plugin Name:' "${SRC}/${SLUG}.php" | sed 's/^ \* Plugin Name:[[:space:]]*//' | tr -d '\r' )"
 
