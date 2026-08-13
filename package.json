@@ -1,6 +1,6 @@
 {
-  "name": "security-header-generator",
-  "version": "6.0.75",
+  "name": "PLUGIN_SLUG",
+  "version": "0.0.1",
   "private": true,
   "type": "commonjs",
   "scripts": {

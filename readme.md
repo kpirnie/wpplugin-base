@@ -10,6 +10,8 @@
 
 Just a simple structure for my plugins.  Use it how you see fit.
 
+Read the READ_ME_FIRST.txt for instruction for how this should be utilized.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
