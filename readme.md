@@ -2,7 +2,7 @@
 
 [![GitHub Issues](https://img.shields.io/github/issues/kpirnie/wpplugin-kp-agent-ready?style=for-the-badge&logo=github&color=006400&logoColor=white&labelColor=000)](https://github.com/kpirnie/wpplugin-kp-agent-ready/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/kpirnie/wpplugin-kp-agent-ready?style=for-the-badge&labelColor=000)](https://github.com/kpirnie/wpplugin-kp-agent-ready/commits/main)
-[![MIT](https://img.shields.io/badge/License-GPLv3-orange.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=000)](LICENSE)
+[![MIT](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=000)](LICENSE)
 
 [![PHP](https://img.shields.io/badge/Min.%20php8.2-777BB4?logo=php&logoColor=white&style=for-the-badge&labelColor=000)](https://php.net)
 [![WordPress](https://img.shields.io/badge/Min.%20WP-6.8-3858e9?logo=wordpress&logoColor=white&style=for-the-badge&labelColor=000)](https://wordpress.org)

@@ -5,7 +5,7 @@
     "type": "project",
     "homepage": "https://kevinpirnie.com/",
     "readme": "readme.txt",
-    "license": "GPL-3.0-or-later",
+    "license": "MIT",
     "prefer-stable": true,
     "funding": [
         {

@@ -7,11 +7,11 @@ DIST="${ROOT}/distribute"
 OWNER="$( stat -c '%U' "${ROOT}" )"
 GROUP="$( stat -c '%G' "${ROOT}" )"
 
-# pull the version from the plugin header, and the stable tag from the readme
+# pull some info from the plugin header and readme
+SLUG="$( grep -m1 'Text Domain:' "${SRC}"/*.php | sed 's/.*Text Domain:[[:space:]]*//' | tr -d '\r' )"
 VERSION="$( grep -m1 '^Version:' "${SRC}/${SLUG}.php" | sed 's/^Version:[[:space:]]*//' | tr -d '\r' )"
 STABLE="$( grep -m1 '^Stable tag:' "${SRC}/readme.txt" | sed 's/^Stable tag:[[:space:]]*//' | tr -d '\r' )"
 NAME="$( grep -m1 '^ \* Plugin Name:' "${SRC}/${SLUG}.php" | sed 's/^ \* Plugin Name:[[:space:]]*//' | tr -d '\r' )"
-SLUG="$( grep -m1 'Text Domain:' "${SRC}"/*.php | sed 's/.*Text Domain:[[:space:]]*//' | tr -d '\r' )"
 
 # they have to match, otherwise we are shipping a mismatched release
 if [ "${VERSION}" != "${STABLE}" ]; then
@@ -73,7 +73,10 @@ wp i18n make-pot "${DIST}" "${DIST}/languages/${SLUG}.pot" \
 
 # fix the ownership and permissions
 chown -R "${OWNER}:${GROUP}" "${ROOT}"
-find "${ROOT}" -type d -exec chmod 755 {} \;
-find "${ROOT}" -type f -exec chmod 644 {} \;
+find "${SRC}" -type d -exec chmod 755 {} \;
+find "${SRC}" -type f -exec chmod 644 {} \;
+find "${DIST}" -type d -exec chmod 755 {} \;
+find "${DIST}" -type f -exec chmod 644 {} \;
+chmod +x "${ROOT}/build.sh"
 
 echo "# Done"

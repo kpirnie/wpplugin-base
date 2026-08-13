@@ -11,5 +11,7 @@
 // throw it in the bit bucket if accessed directly
 defined('ABSPATH') || die('No direct script access allowed');
 
-// include our autoloader
-include PLUGIN_PREFIX_PATH . '/vendor/autoload.php';
+// include our autoloader if it exists
+if (file_exists(PLUGIN_PREFIX_PATH . '/vendor/autoload.php')) {
+    include PLUGIN_PREFIX_PATH . '/vendor/autoload.php';
+}
